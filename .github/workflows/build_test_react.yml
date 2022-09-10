@@ -4,9 +4,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,5 +30,5 @@ jobs:
       - name: npm ci, build and test
         run: |
           npm i -G yarn
-          yarn run build --if-present
-          yarn test 
+          npm run build --if-present
+          npm test
